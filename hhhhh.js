@@ -5,9 +5,9 @@ const fs = require('fs');
 const client = new Discord.Client();
 
 var prefix = "-";
-id img*/
 
-/*
+
+
 
 const dateFormat = require('dateformat');
 
@@ -255,4 +255,4 @@ if(!message.channel.guild) return;
 
 } });
 
-client.login(process.env.BOT_TOKEN)
+client.login(process.env.BOT_TOKEN);
