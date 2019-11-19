@@ -253,6 +253,7 @@ if(!message.channel.guild) return;
 
    })
 
-} });
+} 
+});
 
 client.login(process.env.BOT_TOKEN);
