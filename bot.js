@@ -2,7 +2,15 @@ const Discord = require('discord.js');
 const fs = require('fs');
 const client = new Discord.Client();
 var prefix = "-";
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
 
+client.on('message', msg => {
+  if (msg.content === '-help') {
+    msg.reply('**تــم الارسـال خـاص');
+  }
+});
 /*دخول البوت*/
 
 client.on("guildCreate", guild => {
@@ -100,15 +108,6 @@ client.on("message", message => {
    
    }
    });  
-client.on('message', message => {
-     if (message.content === (prefix + "help")) {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("#8650a7")
-  .addField("Done" , " تــــم ارســالك في الخــاص")
-  message.channel.sendEmbed(embed);
-    }
-});
 
 
 client.login(process.env.BOT_TOKEN);
