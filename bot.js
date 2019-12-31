@@ -6,18 +6,12 @@ var prefix = "-";
 
 client.on('message', msg => {
   if (msg.content === '-help') {
-    msg.reply('**تــم الارسـال خـاص');
+    msg.reply('**تــم الارسـال خـاص**');
   }
 });
 /*دخول البوت*/
 
-client.on("guildCreate", guild => {
-  client.channels.get("661480511176179712").send(' ***  BOT  ***   **Join To**   ***[ ' + `${guild.name}` + ' ]***   ,   **  Owner  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
-});
 
-client.on("guildDelete", guild => {
-  client.channels.get("661480511176179712").send(' ***  BOT  ***   **Leave From**   ***[ ' + `${guild.name}` + ' ]***   ,   **  Owner  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
-});
 
 client.on("message", message => {
     if (message.content === (prefix + "help")) {
